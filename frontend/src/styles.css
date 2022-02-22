@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+  --primary: #9c27b0
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.red{
+  color: #e35e6b;
+}
+.primary{
+  color: var(--primary);
+}
+
+.v-middle{
+  vertical-align: middle;
+}
