@@ -10,6 +10,7 @@
 
 .header .logo{
   max-height: 32px;
+  cursor: pointer;
 }
 
 .header .title-group{
