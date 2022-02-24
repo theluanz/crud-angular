@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-title>Delete Product</mat-card-title>
+  <form>
+    <mat-card-subtitle>Confirm delete product</mat-card-subtitle>
+    <p>
+      Product: <strong>{{ product.name }}</strong>
+    </p>
+    <p>
+      Price: <strong>{{ product.price }}</strong>
+    </p>
+  </form>
+</mat-card>
+
+<button mat-raised-button (click)="deleteProduct()" color="warn">Delete Product</button>
+<button mat-raised-button (click)="cancel()">Cancel</button>

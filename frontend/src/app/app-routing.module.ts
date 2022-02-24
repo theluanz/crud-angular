@@ -1,3 +1,4 @@
+import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductsCrudComponent } from './views/products-crud/products-crud.component';
 import { HomeComponent } from './views/home/home.component';
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'product/update/:id',
     component: ProductUpdateComponent,
+  },
+  {
+    path: 'product/delete/:id',
+    component: ProductDeleteComponent,
   },
 ];
 
