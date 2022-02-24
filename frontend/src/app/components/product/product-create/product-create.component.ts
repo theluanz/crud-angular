@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './product-create.component.html',
   styleUrls: ['./product-create.component.css'],
 })
-export class ProductsCreateComponent implements OnInit {
+export class ProductCreateComponent implements OnInit {
   product: Product = {
     name: '',
     price: '',

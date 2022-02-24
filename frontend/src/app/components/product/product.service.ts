@@ -21,4 +21,7 @@ export class ProductService {
       verticalPosition: 'top',
     });
   }
+  read(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.baseUrl);
+  }
 }

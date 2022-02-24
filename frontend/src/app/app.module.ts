@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -12,6 +12,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
 
 import { HeaderComponent } from './components/template/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -22,8 +23,13 @@ import { HomeComponent } from './views/home/home.component';
 import { ProductsCrudComponent } from './views/products-crud/products-crud.component';
 import { RedDirective } from './directives/red.directive';
 import { ForDirective } from './directives/for.directive';
-import { ProductsCreateComponent } from './components/product/product-create/product-create.component';
+import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { ProductReadComponent } from './components/product/product-read/product-read.component';
 
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localePt);
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +40,8 @@ import { ProductsCreateComponent } from './components/product/product-create/pro
     ProductsCrudComponent,
     RedDirective,
     ForDirective,
-    ProductsCreateComponent,
+    ProductCreateComponent,
+    ProductReadComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,8 +57,14 @@ import { ProductsCreateComponent } from './components/product/product-create/pro
     MatSnackBarModule,
     MatFormFieldModule,
     MatInputModule,
+    MatTableModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: 'pt',
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
