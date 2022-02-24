@@ -8,12 +8,15 @@
     {
       "id": 2,
       "name": "Notebook gamer",
-      "price": 7500.89
+      "price": 7100.89
     },
     {
       "id": 3,
-      "name": "Samsung S22 PRO",
-      "price": 5000.89
+      "name": "Samsung S22 PRO W",
+      "price": 25000.89
+    },
+    {
+      "id": 4
     }
   ]
 }
